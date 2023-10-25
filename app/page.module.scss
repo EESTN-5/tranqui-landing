@@ -1,0 +1,89 @@
+$bg: #FFFDD1;
+$text: #11382A;
+$accent: #45FFBD;
+$spacing: 30px;
+$spacing0_5: 15px;
+$spacing2: 60px;
+.main{
+  margin: 0;
+  padding: $spacing2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: min(50%, 500px);
+  &__title{
+    margin-top: $spacing2;
+    font-weight: 500;
+    font-size: 2.5rem;
+    font-family: "TASAExplorer-Regular", sans-serif;
+  }
+  &__text{
+    font-size: 1.2rem;
+    font-family: "Satoshi", sans-serif;
+  }
+  &Left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    img{
+      width: 100px;
+      height: auto;
+    }
+  }
+  button{
+    cursor: pointer;
+    margin-top: $spacing2;
+    border-radius: 12px;
+    padding: 15px 30px;
+    background-color: $accent;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: "Satoshi", sans-serif;
+    color: $text;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 200ms ease-in-out;
+    &:hover{
+      transform: scale(0.99);
+      background-color: darken($accent, 10%);
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  &Right{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50% + 5);
+  }
+}
+
+
+@media (max-width: 768px){
+  .main{
+    width: 100%;
+    padding: $spacing2 $spacing0_5;
+    &__title{
+      font-size: 2rem;
+    }
+    &__text{
+      font-size: 1rem;
+    }
+    button{
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+    &Right{
+      display: none;
+    }
+  }
+}
