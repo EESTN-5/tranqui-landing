@@ -12,3 +12,16 @@ export const DownloadButton = ()=>{
         </button>
     )
 }
+
+interface SendEmailButton {
+}
+
+export const SendEmailButton = ()=>{
+  return (
+      <button className={styles.main__button} onClick={()=>{
+        window.open("mailto:tomas@tdm.ar")
+      }}>
+        Envianos un correo
+      </button>
+  )
+}
