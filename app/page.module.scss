@@ -7,29 +7,41 @@ $spacing2: 60px;
 .main{
   margin: 0;
   padding: $spacing2;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  width: min(50%, 500px);
+  align-items: center;
   &__title{
+    text-align: center;
+    color: $text;
     margin-top: $spacing2;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
+    font-family: "TASAExplorer-Regular", sans-serif;
+  }
+  &__title2{
+    text-align: center;
+    color: $text;
+    margin-top: $spacing2;
+    font-weight: 500;
+    font-size: 3.75rem;
     font-family: "TASAExplorer-Regular", sans-serif;
   }
   &__text{
+    text-align: center;
     font-size: 1.2rem;
     font-family: "Satoshi", sans-serif;
+    width: 780px;
+    font-weight: 400;
+    line-height: normal;
   }
   &Left{
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    width: 60rem;
     img{
       width: 100px;
       height: auto;
