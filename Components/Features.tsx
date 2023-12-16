@@ -31,7 +31,7 @@ export const Features = () => {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ ...ANIMATIONS.transition, delay: 0.5}}
+                    transition={{ ...ANIMATIONS.transition, delay: 0.2}}
                     className={styles.main__grid2}
                 >
                     <MySpace />
@@ -40,7 +40,7 @@ export const Features = () => {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ ...ANIMATIONS.transition, delay: 0.8}}
+                    transition={{ ...ANIMATIONS.transition, delay: 0.4}}
                     className={styles.main__grid3}
                 >
                     <Places />
@@ -49,7 +49,7 @@ export const Features = () => {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ ...ANIMATIONS.transition, delay: 1}}
+                    transition={{ ...ANIMATIONS.transition, delay: 0.5}}
                     className={styles.main__grid5}
                 >
                     <SecurityPlan />
@@ -58,7 +58,7 @@ export const Features = () => {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ ...ANIMATIONS.transition, delay: 1}}
+                    transition={{ ...ANIMATIONS.transition, delay: 0.7}}
                     className={styles.main__grid4}
                 >
                     <Verified />
