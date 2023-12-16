@@ -4,6 +4,10 @@ $accent: #45FFBD;
 $spacing: 30px;
 $spacing0_5: 15px;
 $spacing2: 60px;
+$font: "TASAExplorer-Regular", sans-serif;
+$font2: "Satoshi", sans-serif;
+$transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+
 .main{
   margin: 0;
   padding: $spacing2;
@@ -11,51 +15,46 @@ $spacing2: 60px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: $spacing;
   &__title{
     text-align: center;
     color: $text;
-    margin-top: $spacing2;
+    margin-top: $spacing;
     font-weight: 500;
-    font-size: 4.5rem;
-    font-family: "TASAExplorer-Regular", sans-serif;
+    max-width: 700px;
+    font-size: 3.5rem;
+    font-family: $font2;
   }
   &__title2{
     text-align: center;
     color: $text;
     margin-top: $spacing2;
     font-weight: 500;
-    font-size: 3.75rem;
-    font-family: "TASAExplorer-Regular", sans-serif;
+    max-width: 700px;
+    font-size: 3rem;
+    font-family: $font2;
   }
   &__text{
     text-align: center;
     font-size: 1.2rem;
-    font-family: "Satoshi", sans-serif;
+    font-family: $font2;
     width: 780px;
     font-weight: 400;
     line-height: normal;
   }
-  &Left{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60rem;
-    img{
-      width: 100px;
-      height: auto;
-    }
+  &__logo{
+    height: 50px;
+    
   }
-  button{
+  button, &__button{
     cursor: pointer;
-    margin-top: $spacing2;
+    margin-top: $spacing;
     border-radius: 12px;
     padding: 15px 30px;
     background-color: $accent;
     font-weight: 700;
     font-size: 1.2rem;
-    font-family: "Satoshi", sans-serif;
+    font-family: $font2;
     color: $text;
     border: none;
     display: flex;
@@ -65,9 +64,9 @@ $spacing2: 60px;
     gap: 10px;
     transition: all 200ms ease-in-out;
     &:hover{
-      transform: scale(0.99);
+      transform: scale(0.98);
       background-color: darken($accent, 10%);
-      transition: all 200ms ease-in-out;
+      transition: $transition;
     }
   }
 
@@ -79,6 +78,176 @@ $spacing2: 60px;
   }
 }
 
+.features{
+  margin: 0;
+  padding: $spacing2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing;
+}
+
+.main__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 0fr repeat(2, 1fr);
+grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin-top: $spacing2;
+}
+
+.gridItem{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 0px 0px 20.8px 23px rgba(28, 38, 40, 0.05);
+  padding: 0 $spacing;
+  h3{
+    font-family: $font2;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 112.725%;
+  }
+}
+
+.gridItemCol{
+  @extend .gridItem;
+  flex-direction: column;
+  min-height: 300px;
+  height: 100%;
+  padding: $spacing;
+  justify-content: flex-end;
+  gap: $spacing0_5;
+}
+
+.main__grid1 { 
+  @extend .gridItem;
+  grid-area: 1 / 1 / 3 / 5; 
+
+  h3{
+    max-width: 300px;
+  }
+
+  svg{
+    position: relative;
+    left: 0;
+    bottom: -20px;
+  }
+}
+.main__grid2 { 
+  @extend .gridItemCol;
+  gap: $spacing;
+  justify-content: center;
+  grid-area: 3 / 1 / 7 / 3; 
+}
+.main__grid3 { 
+  @extend .gridItemCol;
+  grid-area: 3 / 3 / 7 / 5; 
+  svg{
+    height: 200px;
+  }
+}
+.main__grid4 { 
+  @extend .gridItem;
+  grid-area: 5 / 5 / 7 / 7; 
+  h3{
+    max-width: 300px;
+  }
+}
+.main__grid5 { 
+  @extend .gridItemCol;
+  justify-content: center;
+  gap: $spacing;
+  grid-area: 1 / 5 / 5 / 7; 
+}
+
+.support{
+  height: 100dvh;
+  width: 100dvw;
+  padding: 0 $spacing2 $spacing2 $spacing2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing;
+
+  img{
+    height: 50px;
+  }
+  button{
+    @extend .main__button;
+  }
+  a{
+    text-decoration: none;
+    color: $text;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing;
+    svg{
+      margin-right: 0;
+      transition: $transition;
+    }
+
+    &:hover{
+      svg{
+        margin-right: $spacing0_5;
+        transition: $transition;
+      }
+    }
+  }
+}
+.bottomWrapper{
+  position: relative;
+}
+.bottomBackground{
+  background: linear-gradient(0deg, #FFFDD1 -6.77%, rgba(255, 253, 209, 0.00) 88.64%);
+  min-height: 1300px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.footer{
+  padding: $spacing2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  section{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+  }
+  a{
+    text-decoration: none;
+    color: $text;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing0_5;
+    font-weight: 400;
+    transition: $transition;
+
+    &:hover{
+      font-weight: 700;
+      transition: $transition;
+    }
+  }
+}
 
 @media (max-width: 768px){
   .main{

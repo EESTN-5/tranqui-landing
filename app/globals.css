@@ -12,5 +12,11 @@ html{
 }
 
 body{
-  background-color: #FFFDD1;
+  background: linear-gradient(180deg, #FFFDD1 -12.21%, #FFFDD1 15.82%, rgba(255, 253, 209, 0.34) 53.05%, rgba(255, 253, 209, 0.01) 71.87%, rgba(255, 253, 209, 0.00) 71.88%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
