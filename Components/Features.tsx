@@ -62,7 +62,7 @@ export const Features = () => {
                     className={styles.main__grid4}
                 >
                     <Verified />
-                    <h3>Verificado por profesionales de la salud mental</h3>
+                    <h3>Desarrollado por profesionales de salud mental</h3>
                 </motion.div>
             </section>
         </section>

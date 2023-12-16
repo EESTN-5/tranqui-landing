@@ -186,6 +186,7 @@ grid-template-rows: repeat(6, 1fr);
   button{
     @extend .main__button;
   }
+  
   a{
     text-decoration: none;
     color: $text;
@@ -230,7 +231,11 @@ grid-template-rows: repeat(6, 1fr);
     display: flex;
     flex-direction: column;
     gap: $spacing;
+    p{
+      max-width: 50%;
+    }
   }
+
   a{
     text-decoration: none;
     color: $text;
@@ -326,6 +331,9 @@ grid-template-rows: repeat(6, 1fr);
     section{
       align-items: center;
       gap: $spacing0_5;
+      p{
+        max-width: unset;
+      }
     }
   }
 }

@@ -9,7 +9,9 @@ export const Footer = () => {
             <section>
                 <Image src="/tranqui-logo.svg" alt='Tranqui logo' width={138.14} height={50} className={styles.footer__logo} />
                 <p>
-                    Desarrollado con ❤️ por alumnos de la EEST N°5 en conjunto con la UNMDP
+                Tranqui es un dispositivo creado por el Equipo de Extensión de  promo-prevención del suicidio adolescentes y jóvenes de la Facultad de Psicología de la UNMDP.
+                <br />
+                Desarrollo de la aplicación  realizado por alumnos de la EEST N°5.
                 </p>
             </section>
             <section>
