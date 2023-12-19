@@ -20,3 +20,33 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+  transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background: #F0EEC5;
+  transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #B9B799;
+  transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 2px;
+  background: #8E8D75;
+  transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+}
+
+*::selection {
+  background: #F0EEC5;
+  color: #000;
+}

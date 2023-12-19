@@ -6,16 +6,17 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Tranqui',
-  description: 'Herramienta para la prevencion del suicidio desarrollada por la EEST N°5, y la UNMDP',
+  description: 'Herramienta para la prevencion del suicidio',
+  icons: '/logo_tranqui.png'
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={inter.className}>{children}</body>
     </html>
   )

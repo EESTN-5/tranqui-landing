@@ -1,0 +1,97 @@
+$bg: #FFFDD1;
+$text: #11382A;
+$accent: #45FFBD;
+$spacing: 30px;
+$spacing0_5: 15px;
+$spacing2: 60px;
+$font: "TASAExplorer-Regular", sans-serif;
+$font2: "Satoshi", sans-serif;
+$transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing;
+    width: 100%;
+    margin-bottom: $spacing;
+
+    section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: $spacing;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px){
+    .nav{
+        button{
+            padding: 0;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            padding: 0 $spacing2;
+        }
+        &__link{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: $spacing0_5;
+            min-width: 270px;
+            width: 100%;
+            font-family: $font2;
+            svg{
+                stroke: $text;
+            }
+            &Close{
+                @extend .nav__link;
+                margin-top: $spacing2;
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $text;
+            }
+        }
+        &__links{
+            display: none !important;
+        }
+        &__linksOpen{
+            background-color: rgba($bg, 0.3);
+            backdrop-filter: blur(14px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            z-index: 999;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-size: 1.2rem;
+            color: $text;
+
+            font-family: $font2;
+            font-weight: 500;
+            text-decoration: none;
+            transition: $transition;
+        }
+    }
+}

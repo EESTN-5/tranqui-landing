@@ -1,0 +1,51 @@
+$bg: #FFFDD1;
+$text: #11382A;
+$accent: #45FFBD;
+$spacing: 30px;
+$spacing0_5: 15px;
+$spacing2: 60px;
+$font: "TASAExplorer-Regular", sans-serif;
+$font2: "Satoshi", sans-serif;
+$transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+
+.link{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $spacing0_5;
+    text-decoration: none;
+    color: $text;
+    font-family: $font2;
+    cursor: pointer;
+    transition: $transition;
+
+    span{
+        text-align: right;
+        font-family: $font2;
+    }
+
+    &Active{
+        font-weight: 700;
+    }
+    //Border 2px from left to right
+    &::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: $text;
+        bottom: -5px;
+        left: 0;
+        transition: $transition;
+    }
+
+    &:hover{
+        font-weight: 700;
+        &::before{
+            width: 100%;
+        }
+    
+        transition: $transition;
+    }
+}

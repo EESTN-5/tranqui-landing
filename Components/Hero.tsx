@@ -3,17 +3,13 @@ import styles from '../app/page.module.scss'
 import { ANIMATIONS } from '@/constants/anim'
 import Image from 'next/image'
 import { DownloadButton } from './Button'
+import { NavLink } from './Navbar/Link/NavLink'
+import { Navbar } from './Navbar/Navbar'
 
 export const Hero = () => {
     return (
         <section className={styles.main}>
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, ease: cubicBezier(.6, .6, 0, .1) }}
-            >
-                <Image src="/tranqui-logo.svg" alt='Tranqui logo' width={138.14} height={50} className={styles.main__logo} />
-            </motion.div>
+            <Navbar />
             <motion.h1
                 className={styles.main__title}
                 initial={ANIMATIONS.text_initial}

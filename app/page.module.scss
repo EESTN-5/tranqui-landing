@@ -10,7 +10,7 @@ $transition: all 0.2s cubic-bezier(.6,.6,0,.1);
 
 .main{
   margin: 0;
-  padding: $spacing2;
+  padding: $spacing $spacing2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +33,22 @@ $transition: all 0.2s cubic-bezier(.6,.6,0,.1);
     max-width: 700px;
     font-size: 3rem;
     font-family: $font2;
+  }
+  &__nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing;
+    width: 100%;
+    margin-bottom: $spacing;
+
+    section{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing;
+    }
   }
   &__text{
     text-align: center;
@@ -171,20 +187,20 @@ grid-template-rows: repeat(6, 1fr);
 }
 
 .support{
-  height: 100dvh;
   width: 100dvw;
-  padding: 0 $spacing2 $spacing2 $spacing2;
+  padding: $spacing $spacing2 $spacing2 $spacing2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: $spacing;
-
+  background-color: $bg;
   img{
     height: 50px;
   }
   button{
     @extend .main__button;
+    margin-bottom: $spacing2;
   }
   
   a{

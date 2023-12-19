@@ -1,6 +1,6 @@
 import styles from '../app/page.module.scss'
 import Image from 'next/image'
-import { EmailIcon } from './EmailIcon'
+import { EmailIcon } from './Navbar/EmailIcon'
 import Link from 'next/link'
 
 export const Footer = () => {
