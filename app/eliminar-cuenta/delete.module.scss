@@ -1,0 +1,33 @@
+$bg: #FFFDD1;
+$text: #11382A;
+$accent: #45FFBD;
+$spacing: 30px;
+$spacing0_5: 15px;
+$spacing2: 60px;
+$font: "TASAExplorer-Regular", sans-serif;
+$font2: "Satoshi", sans-serif;
+$transition: all 0.2s cubic-bezier(.6,.6,0,.1);
+
+$colorGray: #D1D1D1;
+$borderRadius: 12px;
+
+.unsuscribeForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    input{
+        width: min(300px, 100%);
+        text-align: center;
+        padding: $spacing0_5;
+        border-radius: $borderRadius;
+        border: 2px solid $colorGray;
+        background-color: rgba($colorGray, 0.3);
+        font-family: $font2;
+        font-size: 1.1rem;
+    }
+
+    input[disabled]{
+        opacity: 0.5;
+        margin-bottom: $spacing0_5;
+    }
+}
