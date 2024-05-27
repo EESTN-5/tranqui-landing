@@ -23,6 +23,7 @@ export const Navbar = ()=>{
     const handleOpenHome = () => openPage("/");
     const handleOpenTeam = () => openPage("/equipo");
     const handleOpenSupport = () => openPage("/soporte");
+    const handleOpenMediaPresence = () => openPage("/presencia-en-medios");
 
     return (
         <motion.section
@@ -51,7 +52,7 @@ export const Navbar = ()=>{
                             <div className={styles.nav__link} onClick={handleOpenSupport} onKeyDown={()=>{}}>
                                 Consultas Técnicas <IconArrowRight />
                             </div>
-                            <div className={styles.nav__link} onClick={handleOpenSupport} onKeyDown={()=>{}}>
+                            <div className={styles.nav__link} onClick={handleOpenMediaPresence} onKeyDown={()=>{}}>
                                 Presencia en medios <IconArrowRight />
                             </div>
                             <div className={styles.nav__linkClose} onClick={handleOpen} onKeyDown={()=>{}}>
