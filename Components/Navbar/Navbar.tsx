@@ -51,6 +51,9 @@ export const Navbar = ()=>{
                             <div className={styles.nav__link} onClick={handleOpenSupport} onKeyDown={()=>{}}>
                                 Consultas Técnicas <IconArrowRight />
                             </div>
+                            <div className={styles.nav__link} onClick={handleOpenSupport} onKeyDown={()=>{}}>
+                                Presencia en medios <IconArrowRight />
+                            </div>
                             <div className={styles.nav__linkClose} onClick={handleOpen} onKeyDown={()=>{}}>
                                 <IconX />
                                 Cerrar
@@ -63,6 +66,7 @@ export const Navbar = ()=>{
                 <NavLink label='Inicio' page='/' />
                 <NavLink label='Sobre Tranqui' page='/equipo' />
                 <NavLink label='Consultas Técnicas' page='/soporte' />
+                <NavLink label='Presencia en medios' page='/presencia-en-medios' />
             </section>
             {mobile && <button onClick={handleOpen}><MenuIcon /></button>}
         </motion.section>
