@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tranqui App
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Descripción
+Descripcion de la app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lineamientos
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Ramas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+1. **Rama Principal (`main`)**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   - No se debe hacer push directamente a `main`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   - Todos los cambios deben ser enviados a través de Pull Requests (PRs).
+
+
+
+2. **Ramas de Funcionalidad (Feature Branches)**:
+
+   - Crea una nueva rama a partir de `main` para cada nueva funcionalidad o corrección de errores.
+
+   - Nombrado de ramas: usa un prefijo descriptivo seguido de una breve descripción. Ejemplos:
+
+     - `feat/nueva-funcionalidad`
+
+     - `fix/bug-en-el-sistema`
+
+
+
+### Commits
+
+
+
+1. **Mensajes de Commit**:
+
+   - Los mensajes de commit deben ser claros y descriptivos.
+
+   - Usa el formato:
+
+     ```
+
+     tipo(parte_afectada): descripción breve
+
+
+
+     Explicación detallada (si es necesaria)
+
+     ```
+
+   - Tipos comunes: `feat` (funcionalidad), `fix` (corrección de errores), `docs` (documentación), `style` (formato, sin afectar el código), `refactor` (cambios en el código sin cambiar funcionalidades), `test` (añadir o modificar tests).
+
+
+
+2. **Ejemplo de mensaje de commit**:
+
+   ```
+
+   feat(UI): añadir botón de recarga
+
+
+
+   Se añadió un botón de recarga en la pantalla principal para mejorar la experiencia del usuario.
+
+   ```
+
+
+
+### Push y Pull Requests
+
+
+
+1. **Prohibido hacer push a `main`**:
+
+   - Bajo ninguna circunstancia se debe hacer push directo a la rama `main`.
+
+   - Todos los cambios deben pasar por el proceso de Pull Request (PR).
+
+
+
+2. **Realización de Pull Requests**:
+
+   - Asegúrate de realizar PRs breves y centrados en una sola funcionalidad o corrección.
+
+   - Describe claramente qué problema resuelve la PR o qué funcionalidad añade.
+
+   - Relaciona la PR con los Issues correspondientes, si es aplicable.
+
+
+
+3. **Revisión de Código**:
+
+   - Todos los PRs deben ser revisados por al menos un miembro del equipo antes de ser fusionados.
+
+   - Responde a los comentarios de revisión y realiza los cambios necesarios antes de la aprobación final.
+
+
+
+## Estándares de Código
+
+
+
+- Asegúrate de seguir los estándares de codificación definidos en el proyecto. Consulta la guía de estilo específica en [ruta/a/la/guia].
+
+- Utiliza las herramientas de linting y formateo automatizado que hemos configurado.
+
+
+
+## Pruebas
+
+
+
+- Antes de enviar una PR, asegúrate de que todas las pruebas pasen correctamente.
+
+- Añade pruebas para cualquier nueva funcionalidad o corrección de errores.
+
+
+
+## Documentación
+
+
+
+- Mantén la documentación actualizada con cualquier cambio significativo en el código o la funcionalidad.
+
+- Consulta [ruta/a/la/documentacion] para obtener más detalles.
+
+
+
+## Comunicación
+
+
+
+- Utiliza [herramienta de comunicación] para discutir cualquier cambio importante o para reportar problemas de manera informal antes de crear un Issue formal.
+
+
+
+## Agradecimientos
+
+
+
+Gracias por contribuir a [nombre del proyecto]. Juntos, mantendremos un código limpio y un proceso de desarrollo ágil.
